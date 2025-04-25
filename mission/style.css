@@ -1,0 +1,76 @@
+
+
+
+
+header {
+    text-align: center;
+    font-size: 0;
+    margin-top: 75px;
+   }
+   
+   h1{
+       font-size: 30px;
+       letter-spacing: 3px;
+   }
+   
+   .normal, h2 {
+       color: #006EB6;
+       margin-bottom: 50px;
+       letter-spacing: 3px;
+       font-size: 12px;
+       display: inline-block; /* Important!  Makes the border fit the content */
+       padding-bottom: 5px; /* Add space *below* the text for the border */
+       border-bottom: 1px solid rgba(128, 128, 128, 0.3); /* The key: bottom border only */
+       margin: 0 0 20px;
+       padding: auto 0;
+   }
+   
+   
+   .spacer, h2 {
+       color: white;
+       margin: auto 0;
+       padding: auto 0;
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   main {
+       text-align: left;
+       border: 1px solid gray;
+       margin: 100px 500px;
+   }
+   
+   .paragraph {
+       margin: auto 200px;
+       line-height: 1.5;
+   }
+   
+   .First {
+   
+   }
+   
+   .Last {
+       font-style: italic;
+       
+   }
+   
+   .List li {
+      margin: 15px auto;
+   }
+   
+   
+   footer {
+       text-align: center;
+       padding: 50px;
+   }
+   
+   footer img {
+       width: 150px;
+   }
