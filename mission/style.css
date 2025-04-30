@@ -15,8 +15,26 @@ header {
        letter-spacing: 3px;
        
    }
+
+   .dark {
+    background-color: #333;
+    color: white;
+   }
+
+   .normal_dark {
+    color: lightblue;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    font-size: 12px;
+    display: inline-block; /* Important!  Makes the border fit the content */
+    padding-bottom: 5px; /* Add space *below* the text for the border */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3); /* The key: bottom border only */
+    margin: 0 0 20px;
+    padding: 0.1em 0;
+   }
+
    
-   .normal, h2 {
+   .normal {
        color: #006EB6;
        margin-bottom: 50px;
        letter-spacing: 3px;
@@ -34,24 +52,22 @@ header {
     color: #333;
    }
 
-   
-   .spacer, h2 {
+   .spacer {
        color: white;
        margin: auto 0;
        padding: 0.1em 0;
    }
 
 
+
  
    
-   
+ 
 
 
+
    
-   .dark {
-    background-color: #333;
-    color: white;
-   }
+ 
 
 
 
