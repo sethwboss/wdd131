@@ -2,15 +2,18 @@
 
 
 
+
 header {
     text-align: center;
     font-size: 0;
     margin-top: 75px;
+    font-family: 'Roboto';
    }
    
    h1{
        font-size: 30px;
        letter-spacing: 3px;
+       
    }
    
    .normal, h2 {
@@ -22,21 +25,36 @@ header {
        padding-bottom: 5px; /* Add space *below* the text for the border */
        border-bottom: 1px solid rgba(128, 128, 128, 0.3); /* The key: bottom border only */
        margin: 0 0 20px;
-       padding: auto 0;
+       padding: 10 0;
+   }
+   
+
+   .spacer_dark {
+    background-color: #333;
+    color: #333;
    }
    
    
    .spacer, h2 {
        color: white;
        margin: auto 0;
-       padding: auto 0;
+       padding: 10 0;
    }
+
+
+ 
    
    
+
+
    
-   
-   
-   
+   .dark {
+    background-color: #333;
+    color: white;
+   }
+
+
+
    
    
    
@@ -45,6 +63,8 @@ header {
        text-align: left;
        border: 1px solid gray;
        margin: 100px 500px;
+       font-family: 'Roboto', sans-serif;
+       
    }
    
    .paragraph {
