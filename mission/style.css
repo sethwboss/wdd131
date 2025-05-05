@@ -2,12 +2,11 @@
 
 
 
-
 header {
     text-align: center;
     font-size: 0;
     margin-top: 75px;
-    font-family: 'Roboto';
+    font-family: 'Times New Roman', Times, serif;
    }
    
    h1{
@@ -79,7 +78,7 @@ header {
        text-align: left;
        border: 1px solid gray;
        margin: 100px 500px;
-       font-family: 'Roboto', sans-serif;
+       font-family: 'Times New Roman', Times, serif;
        
    }
    
