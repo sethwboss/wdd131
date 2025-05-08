@@ -15,19 +15,28 @@
 
 
 
-
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
 body {
     font-size: 1.2em;
     background-color: lightgray;
+    display: flex; /* 1. Enable Flexbox on the body */
+    flex-direction: column; 
   }
 
+main {
+    flex-grow: 1;
+}
 
 
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
-    padding: 10px 5px 20px;
+    padding-bottom: 20px;
 }
 
 header h1 {
@@ -95,10 +104,11 @@ img {
 
 
 footer {
+  display: block;
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 20px 0px;
   text-align: center;
+  padding: 10px 0px;
 }
 
 
@@ -116,6 +126,10 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  button {
+    font-size: 1.5em;
+  }
   }
 
 
@@ -130,6 +144,8 @@ footer {
       display: inline;
       padding: 50px;
     }
+
+   
 
     .button_class {
       display: none;
