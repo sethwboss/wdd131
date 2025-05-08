@@ -1,4 +1,7 @@
 
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
 :root {
 --primary-color: #52489c;
@@ -11,8 +14,12 @@
 }
 
 
+
+
+
 body {
     font-size: 1.2em;
+    background-color: lightgray;
   }
 
 
@@ -20,20 +27,20 @@ body {
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
+    padding: 10px 5px 20px;
 }
 
 header h1 {
     font-family: var(--secondary-font);
 }
 
-a:link,
-a:visited {
-  color: var(--text-light);
-}
+
 
 a {
+  text-align: center;
   display: block;
   width: 100%;
+  color: var(--text-light);
 }
 
 button {
@@ -45,8 +52,20 @@ button {
   font-size: 1.2em;
 }
 
+.button_class {
+  display: block;
+  text-align: center;
+  margin: 0px 0px 5px;
+}
 
+.images {
+  text-align: center;
+}
 
+img {
+  border: white 5px solid;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0);
+}
 
 
 
@@ -79,6 +98,7 @@ footer {
   background-color: var(--primary-color);
   color: var(--text-light);
   padding: 20px 0px;
+  text-align: center;
 }
 
 
@@ -89,16 +109,35 @@ footer {
   
   
   @media screen and (min-width: 700px) {
-    main {
-      
-    }
+  a {
+    display: none;
+  }
+  .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   }
 
 
 
   @media screen and (min-width: 1000px) {
-    main {
-      
+    
+    .a_tags {
+      text-align: center;
+    }
+    
+    a {
+      display: inline;
+      padding: 50px;
+    }
+
+    .button_class {
+      display: none;
+    }
+
+    .images {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
   }
