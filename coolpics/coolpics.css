@@ -91,16 +91,23 @@ button {
 
 
 
-
-
-
-
 main {
     font-family: var(--secondary-font);
 }
 
 
+h1 {
+    text-align: center;
+}
 
+
+
+
+
+
+
+
+/* dialog css */
 
 
 dialog {
@@ -144,9 +151,17 @@ dialog img {
 
 
 
-h1 {
-    text-align: center;
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
