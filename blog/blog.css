@@ -53,6 +53,10 @@ nav {
 }
 
 
+.whole_grid {
+    margin: 20px auto;
+}
+
 
 
 
@@ -83,6 +87,7 @@ p, h3 {
     text-align: right;
     padding-right: 20px;
     margin-right: 20px;
+    line-height: 1em;
 }
 
 .book {
@@ -91,6 +96,10 @@ p, h3 {
 
 .book_img {
     text-align: center;
+}
+
+.book h2 {
+    margin-top: 5px;
 }
 
 img {

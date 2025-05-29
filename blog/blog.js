@@ -1,3 +1,5 @@
+
+
 const articles = [
 	{
 		id: 1,
@@ -23,5 +25,75 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 3,
+		title: "Belgariad Book One: Pawn of Prophecy",
+		date: "Feb 12, 2022",
+		description:
+		"A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+		imgSrc:
+		"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+		imgAlt: "Book cover for Pawn of Prophecy",
+		ages: "12-16",
+		genre: "Fantasy",
+		stars: "⭐⭐⭐⭐⭐"
 	}
 ]
+
+
+let container = document.querySelector('#maincontent');
+
+
+articles.forEach(function(item, index){
+    //console.log(item.first);
+    
+    let name = document.createElement('article');
+    name.setAttribute('class', 'whole_grid');
+
+	const rightGridClass = (index === 0) ? 'second_grid' : 'no_grid'; // New line to determine the class
+
+    let html = `
+        <div class="first_grid">
+            <div class="date">
+                <h3>
+                    ${item.date}
+                </h3>
+                <p>
+                    ${item.ages}
+                </p>
+                <p>
+                    ${item.genre}
+                </p>
+				<p>
+                    ${item.stars}
+                </p>
+            </div>
+
+
+            <div class="book">
+                <h2>
+                    ${item.title}
+                </h2>
+                <div class="book_img">
+                    <img src="${item.imgSrc}" alt="${item.imgAlt}">
+                </div>
+                <p>
+                    ${item.description}
+                </p>
+       		 </div>
+		</div>
+
+		<div class="${rightGridClass}">
+			<p>${(index === 0) ? 'Filters will go here' : ''}</p>
+		</div>
+	
+    `
+
+    name.innerHTML = html;
+
+    container.appendChild(name);
+
+
+
+})
