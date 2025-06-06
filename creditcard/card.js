@@ -21,11 +21,14 @@ function submitHandler(event) {
 		// it is a number, but is it valid?
 		errorMsg += 'Card number is not a valid card number\n'
 	}
+
+
+    
     const currentDate = new Date()
     if ('20' + this.expYear.value < currentDate.getFullYear()) {
         errorMsg += 'Card is expired\n'
-    } else if (this.expMonth.value < currentDate.getMonth()) {
-        errorMsg += 'Card is expired\n'
+    } else if (parseInt('20' + this.expYear.value, 10) === currentDate.getFullYear() && parseInt(this.expMonth.value, 10) < (currentDate.getMonth() + 1)) {
+        errorMsg += 'Card is expired\n';
     }
 	if (errorMsg !== '') {
 		// there was an error. stop the form and display the errors.
