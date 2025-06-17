@@ -6,14 +6,95 @@
 --accent-color: #f45b69;
 --text-dark: #333;
 --text-light: #ebebeb;
---primary-font: Amatic SC, Helvetica, sans-serif;
---secondary-font: Mooli, san-serif;
+--primary-font: Peralta, Georgia, serif;
+--secondary-font: Arial, Helvetica, sans-serif;
+}
+
+
+/* {
+    border: 1px red solid;
+} */
+
+
+/* Header CSS*/
+
+header {
+    padding: 50px 30px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.section1 {
+    display: flex;
+}
+
+.section2 {
+    margin-top: 50px;
+    display: flex;
+    font-family: var(--secondary-font);
+}
+
+
+
+header img {
+    width: 70px;
+}
+
+header h1 {
+    font-family: var(--primary-font);
+    margin: 0;
+    align-self: flex-end;
+}
+
+header button {
+    width: 30px;
+    height: 30px;
+}
+
+header input {
+    height: 30px;
+    flex-grow: 1;
 }
 
 
 
 
 
-footer a:nth-of-type(1) {
+
+/* Start of Main CSS*/
+
+
+main, footer {
+    font-family: var(--secondary-font)
+}
+
+img {
+	max-width: 100%;
+}
+
+
+
+
+/* Start of Footer CSS*/
+
+
+
+footer {
+    justify-content: center;
+    display: grid;
+}
+
+footer img {
+    width: 50px;
+}
+
+.social {
+    justify-self: center;
+}
+
+
+.attribute {
     font-size: 0.6em;
+    justify-self: center;
 }
