@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+
+:root {
+--primary-color: #52489c;
+--secondary-color: #59c3c3;
+--accent-color: #f45b69;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Amatic SC, Helvetica, sans-serif;
+--secondary-font: Mooli, san-serif;
+}
+
+
+
+
+
+footer a:nth-of-type(1) {
+    font-size: 0.6em;
+}
