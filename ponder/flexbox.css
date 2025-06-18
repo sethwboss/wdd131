@@ -52,11 +52,39 @@ main section {
 }
 
 
+.media-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.media-card img {
+    width: 70%;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery section {
+    flex-basis: 500px;
+}
+
+
 @media screen and (min-width: 700px) {
     .main-nav {
         
         flex-direction: row;
 
+    }
+
+    .media-card {
+        flex-direction: row;
     }
 
     .main-nav li {

@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
 
 :root {
---primary-color: #52489c;
+--primary-color: #1B98E0;
 --secondary-color: #59c3c3;
---accent-color: #f45b69;
 --text-dark: #333;
 --text-light: #ebebeb;
 --primary-font: Peralta, Georgia, serif;
@@ -33,6 +32,8 @@ header {
     margin-top: 50px;
     display: flex;
     font-family: var(--secondary-font);
+    border: 1px solid gray;
+    border-radius: 3px;
 }
 
 
@@ -83,6 +84,7 @@ img {
 footer {
     justify-content: center;
     display: grid;
+    flex-direction: row;
 }
 
 footer img {
@@ -97,4 +99,16 @@ footer img {
 .attribute {
     font-size: 0.6em;
     justify-self: center;
+}
+
+
+@media screen and (min-width: 700px) {
+
+
+    footer {
+        flex-direction: row-reverse;
+        flex-direction: column-reverse;
+    }
+
+
 }
