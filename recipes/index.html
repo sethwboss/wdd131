@@ -22,56 +22,66 @@
 
 
 <body>
+
+    <div class="container">
     
-    <header>
-        <div class="section1">
-            <img src="images/recipe-book.png" alt="recipe book image">
-            <h1>RecipeBook</h1>
-        </div>
+        <header>
+            <div class="section1">
+                <img src="images/recipe-book.png" alt="recipe book image">
+                <h1>RecipeBook</h1>
+            </div>
 
-        <form class ="section2" action="/search" method="get">
-            <input type="search" id="search-box" name="query" placeholder="Find a recipe">
-            <button type="submit">
-                <img src="images/search-interface-symbol.png" alt="Search icon">
-            </button>
-        </form>
-    </header>
-
-
-    <main>
-
-        <img src="images/apple-crisp.jpg" alt="apple crisp image">
-        <button>Dessert</button>
-        <h2>Apple Crisp</h2>
-
-        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-            <span aria-hidden="true" class="icon-star">⭐</span>
-            <span aria-hidden="true" class="icon-star">⭐</span>
-            <span aria-hidden="true" class="icon-star">⭐</span>
-            <span aria-hidden="true" class="icon-star-empty">⭐</span>
-            <span aria-hidden="true" class="icon-star-empty">☆</span>
-        </span>
-
-        <p class="description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-
-    </main>
+            <form class ="section2" action="/search" method="get">
+                <input type="search" id="search-box" name="query" placeholder="Find a recipe">
+                <button type="submit">
+                    <img src="images/search-interface-symbol.png" alt="Search icon">
+                </button>
+            </form>
+        </header>
 
 
-    <footer>
-  
+        <main>
 
-        <div class="social">
-            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
-            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
-            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
-            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+            <div class="main_grid">
+                <img src="images/apple-crisp.jpg" alt="apple crisp image">
+                <div class="not_image">
+                    <button>dessert</button>
+                    <h2>Apple Crisp</h2>
 
-            
-        </div>
-        <a class="attribute" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>  
+                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                        <span aria-hidden="true" class="icon-star-empty">☆</span>
+                    </span>
 
+                    <p class="description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+                </div>
+
+            </div>
+
+
+        </main>
+
+
+        <footer>
     
-    </footer>
+
+            <div class="social">
+                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+                <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+                <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+                <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+
+                
+            </div>
+            <a class="attribute" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>  
+
+        
+        </footer>
+
+    </div>
 
 </body>
 </html>

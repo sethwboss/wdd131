@@ -74,6 +74,38 @@ img {
 	max-width: 100%;
 }
 
+main h2 {
+    margin-top: 30px;
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    margin-bottom: 5px; /* Remove default bottom margin */
+}
+
+.main_grid {
+    border: 2px solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    margin: 20px 30px;
+}
+
+main button {
+    margin-top: 10px;
+    width: 100px;
+    font-size: 1.6em;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 3px;
+}
+
+.description {
+    display: none;
+}
+
+.rating {
+    margin-bottom: 30px;
+}
 
 
 
@@ -82,6 +114,7 @@ img {
 
 
 footer {
+    margin-top: 50px;
     justify-content: center;
     display: grid;
     flex-direction: row;
@@ -91,24 +124,92 @@ footer img {
     width: 50px;
 }
 
+
+
 .social {
     justify-self: center;
+    text-decoration: none;
 }
 
 
 .attribute {
-    font-size: 0.6em;
+    font-size: 0.8em;
     justify-self: center;
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 
-@media screen and (min-width: 700px) {
+
+
+
+
+@media screen and (min-width: 600px) {
+
+
+    .section1 {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .main_grid {
+        border: 2px solid gray;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 20px 30px;
+        padding: 0px;
+    }
+
+    main img {
+        width: 350px;
+        padding: 20px 20px;
+    }
+
+    .not_image {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+
+
+    .description {
+    display: block;
+    }
+
 
 
     footer {
+        display: flex;
         flex-direction: row-reverse;
-        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin: 50px 30px;
+    }
+
+    .social {
+    justify-self: center;
+    text-decoration: none;
+    align-self: center;
+    }
+
+
+    .attribute {
+        font-size: 0.8em;
+        justify-self: center;
+        align-self: center;
+        text-decoration: none;
+        color: var(--primary-color);
     }
 
 
 }
+
+
+@media screen and (min-width: 960px) {
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
