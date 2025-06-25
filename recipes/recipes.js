@@ -279,3 +279,174 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+
+
+
+
+function random(numRecipes) {
+	return Math.floor(Math.random() * numRecipes);
+}
+
+function getRandomListEntry(list) {
+	const listLength = list.length;
+	const randomNum = random(listLength);
+	return list[randomNum];
+}
+
+
+
+
+function tagsTemplate(tags) {
+
+	const CATEGORY_TAGS = ['dessert', 'side', 'entree'];
+    const tagButtonsHtml = tags
+        .filter(tag => {
+            return CATEGORY_TAGS.includes(tag.toLowerCase());
+        })
+        .map(tag => {
+            return `<button>${tag}</button>`;
+        })
+        .join('');
+
+	let html = tagButtonsHtml
+
+	return html;
+}
+
+
+
+
+
+
+function ratingTemplate(rating) {
+	// begin building an html string using the ratings HTML written earlier as a model.
+	let html = `<span
+	class="rating"
+	role="img"
+	aria-label="Rating: ${rating} out of 5 stars"
+>`
+// our ratings are always out of 5, so create a for loop from 1 to 5
+
+    let count = 0;
+    while (count != 5) {
+        if (rating > count) {
+            html += `<span aria-hidden="true" class="icon-star">⭐</span>`; // check to see if the current index of the loop is less than our rating
+        } else {		// if so then output a filled star
+            html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+        }				// else output an empty star
+        count += 1;
+    }
+	
+
+	// after the loop, add the closing tag to our string
+	html += `</span>`
+	// return the html string
+	return html
+}
+
+
+
+
+function recipeTemplate(recipe) {
+	return `<div class="main_grid">
+                <img src="${recipe.image}" alt="picture">
+                <div class="not_image">
+                    ${tagsTemplate(recipe.tags)}
+                    <h2>${recipe.name}</h2>
+
+                    ${ratingTemplate(recipe.rating)}
+
+                    <p class="description">${recipe.description}</p>
+                </div>
+            </div>;`
+}
+
+
+
+
+function renderRecipes(recipeList) {
+	// get the element we will output the recipes into
+	let main = document.querySelector("main");
+	main.innerHTML ="";
+
+	// use the recipeTemplate function to transform our recipe objects into recipe HTML strings
+	    recipeList.forEach(recipe => { 
+			const recipeHtml = recipeTemplate(recipe); 
+			main.innerHTML += recipeHtml; 	// Set the HTML strings as the innerHTML of our output element.
+    })
+
+
+}
+
+
+
+const searchForm = document.querySelector('.section2');
+searchForm.addEventListener('submit', searchHandler);
+
+
+function searchHandler(event) {
+	event.preventDefault();
+
+	const searchInput = document.getElementById('search-box');
+	const query = searchInput.value.toLowerCase();
+
+	const recipesToRender = filterRecipes(query);
+
+	renderRecipes(recipesToRender);
+
+}
+
+
+function filterRecipes(query) {
+
+	const filtered = recipes.filter(recipe => {
+		const nameMatch = recipe.name.toLowerCase().includes(query);
+		const descriptionMatch = recipe.description.toLowerCase().includes(query);
+		const tagsMatch = recipe.tags.some(tag => tag.toLowerCase().includes(query));
+		const ingredientsMatch = recipe.recipeIngredient.some(ingredient => ingredient.toLowerCase().includes(query));
+
+		return nameMatch || descriptionMatch || tagsMatch || ingredientsMatch;
+	});
+
+	const sorted = filtered.sort((a, b) => {
+		const nameA = a.name.toLowerCase();
+		const nameB = b.name.toLowerCase();
+		if (nameA < nameB) {
+			return -1;
+		}
+		if (nameA > nameB) {
+			return 1;
+		}
+		return 0;
+	})
+
+		
+
+
+	return sorted
+}
+
+
+
+function init() {
+  // get a random recipe
+  const recipe = getRandomListEntry(recipes);
+  // render the recipe with renderRecipes.
+  renderRecipes([recipe]);
+}
+init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
