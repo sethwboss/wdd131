@@ -144,6 +144,14 @@ console.log(filteredHikes);
 
 
 
+let randomNum = Math.floor(Math.random() * hikes.length;
+console.log(randomNum);
+
+function renderHike(hike) {
+  
+}
+
+
 
 
 

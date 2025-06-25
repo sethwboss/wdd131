@@ -421,7 +421,7 @@ function filterRecipes(query) {
 		return 0;
 	})
 
-		
+
 
 
 	return sorted
