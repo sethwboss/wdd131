@@ -1,7 +1,7 @@
-Ideas:
+Idea:
 
-1. Video Game
+Title: Rock Paper Scissors Game
 
-2. 
+Home Page: "How to Play" instructions, game rules, and a "Start Game" button that takes them to child page
 
-3. 
+Child Page: Game interface, button to return to home page
