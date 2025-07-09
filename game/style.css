@@ -270,3 +270,9 @@ body, p, .description, .choice-box, .score-box, .footer-content, button, .submit
     background: none !important;
     cursor: pointer;
 }
+
+
+.attribute {
+    color: var(--secondary-color); 
+    font-weight: bold; 
+}

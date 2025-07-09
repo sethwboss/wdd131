@@ -300,3 +300,8 @@ body, p, .description, .choice-box, .score-box, .footer-content, button, .submit
     border: 2px solid white; 
     box-shadow: 0 0 15px rgba(139, 0, 0, 0.7);
 }
+
+.attribute {
+    color: var(--secondary-color); 
+    font-weight: bold; 
+}
