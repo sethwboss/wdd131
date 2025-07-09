@@ -38,6 +38,8 @@ const mainContentHTML = `
 `;
 
 document.addEventListener('DOMContentLoaded', () => {
+    
+    
     const mainElement = document.getElementById('dynamic-main-content');
     if (mainElement) {
         mainElement.innerHTML = mainContentHTML;
