@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Peralta&display=swap');
 
 :root {
+  /* change the values below to your colors from your palette */
   --primary-color: #1dbae6;
   --secondary-color: #fcb418;
   --accent1-color: #929291;
   --accent2-color: #037dc6;
 
+  /* change the values below to your chosen font(s) */
   --heading-font: "Montserrat", Helvetica, sans-serif;
   --paragraph-font: Arial, Verdana, sans-serif;
 
-  --headline-color-on-white: var(--primary-color);
-  --headline-color-on-color: black;
-  --paragraph-color-on-white: black;
-  --paragraph-color-on-color: black;
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: var(--primary-color); /* headlines on a white background */
+  --headline-color-on-color: black; /* headlines on a colored background */
+  --paragraph-color-on-white: black; /* paragraph text on a white background */
+  --paragraph-color-on-color: black; /* paragraph text on a colored background */
   --paragraph-background-color: var(--primary-color);
   --nav-link-color: var(--primary-color);
   --nav-background-color: black;
@@ -27,11 +30,11 @@ html, body {
 }
 
 body {
-    font-family: var(--paragraph-font);
-    background: var(--accent1-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: var(--paragraph-font);
+    background: var(--accent1-color);
 }
 
 main {
@@ -39,6 +42,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 60vh;
 }
 
 .main-header {
@@ -108,7 +112,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 h3 {
@@ -116,10 +120,10 @@ h3 {
 }
 
 .description {
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-    font-size: 1.2rem;
     text-align: center;
+    max-width: 600px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
 }
 
 .play-now-btn {
@@ -133,14 +137,6 @@ h3 {
     color: #111;
     text-decoration: none;
     text-align: center;
-    width: auto;
-    max-width: 350px;
-    transition: filter 0.2s;
-}
-
-.play-now-btn:hover {
-    filter: brightness(0.75);
-    cursor: pointer;
 }
 
 .main-footer {
@@ -163,6 +159,7 @@ h3 {
     font-family: var(--heading-font);
 }
 
+/* Game page styles */
 .rules-section, .user-selection, .computer-selection, .score-section {
     width: 100%;
     max-width: 600px;
@@ -171,6 +168,13 @@ h3 {
 }
 
 .choices-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.choices-row-comp {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -187,19 +191,27 @@ h3 {
     justify-content: center;
     font-size: 1rem;
     background: var(--accent2-color);
+    transition: background 0.2s, filter 0.2s;
 }
 
-.submit-btn {
-    margin-top: 10px;
-    padding: 6px 18px;
-    font-size: 1rem;
-    background: #d6eed6;
-    border: 1.5px solid #222;
-    border-radius: 6px;
+.choice-box:hover {
     cursor: pointer;
+    filter: brightness(0.75);
 }
 
-.computer-selection .choices-row {
+.choice-box-comp {
+    border: 2px solid #222;
+    border-radius: 12px;
+    width: 110px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    background: var(--accent2-color);
+}
+
+.choices-row-comp {
     border: 2px solid #222;
     border-radius: 16px;
     padding: 20px 0;
@@ -234,14 +246,17 @@ h3 {
     color: black;
 }
 
+/* Font settings for headings and nav */
 h1, h2, h3, .navbar, .nav-links, .navbar a {
     font-family: var(--heading-font);
 }
 
+/* Font settings for all other text */
 body, p, .description, .choice-box, .score-box, .footer-content, button, .submit-btn {
     font-family: var(--paragraph-font);
 }
 
+/* Navigation color settings */
 .navbar a:hover {
     color: white;
     background-color: var(--accent2-color);
@@ -256,17 +271,32 @@ body, p, .description, .choice-box, .score-box, .footer-content, button, .submit
     object-fit: contain;
 }
 
-.home-bg-img {
-    max-width: 400px;
-    width: 90%;
+.choice-img-comp {
+    width: 90px;
+    max-height: 65px;
+    height: auto;
     display: block;
-    margin: 30px auto 0 auto;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    border: 3px solid black;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.hide {
+    visibility: hidden;
 }
 
 .logo a:hover {
     background: none !important;
     cursor: pointer;
+}
+
+.computer-selected {
+    background-color: darkred;
+    border: 2px solid white;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+.user-selected {
+    background-color: darkred; 
+    border: 2px solid white; 
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.7);
 }
