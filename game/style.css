@@ -273,6 +273,9 @@ body, p, .description, .choice-box, .score-box, .footer-content, button, .submit
 
 
 .attribute {
-    color: var(--secondary-color); 
+    color: black; 
     font-weight: bold; 
+    display: inline-block;
+    padding: 10px 15px;  
+    margin: 5px 0;       
 }
